@@ -52,7 +52,7 @@ export default function Hero() {
           </Card>
         </div>
       </div>
-      <div className={"items-center justify-center my-auto"}>
+      <div className={"items-center justify-center my-auto ml-auto"}>
         <Card size={"default"} className={"mx-auto w-full max-w-md"}>
           <img
             src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
