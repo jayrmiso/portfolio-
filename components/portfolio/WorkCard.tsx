@@ -1,18 +1,8 @@
 import {Card, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import React from "react";
 import {Badge} from "@/components/ui/badge";
+import type { WorkItem } from "@/lib/portfolio-content";
 
-export interface CardImageProps {
-  src: string;
-  title: string;
-  description: string
-  badges: string[]
-  imageAlt?: string
-  status?: string
-  meta?: string[]
-}
-
-export default function CardImage({ title, description, badges = ["Badge A", "Badge B", "Badge C"], status = "production", meta = [] }: CardImageProps) {
+export default function WorkCard({ title, description, badges, status, meta }: WorkItem) {
   return (
     <Card className="h-full border-b border-border">
       <div className="portfolio-fine-grid-bg flex min-h-40 flex-col justify-end gap-3 border-b border-border bg-muted p-4">

@@ -1,5 +1,5 @@
 import {Avatar, AvatarFallback} from "@/components/ui/avatar";
-import {NavigationMenus} from "@/components/NavigationMenu";
+import {NavigationMenus} from "@/components/layout/NavigationMenu";
 
 export default function Navigation() {
   return (
