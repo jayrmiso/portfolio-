@@ -17,7 +17,7 @@ const menus: { title: string; href: string }[] = [
     href: "#work"
   },
   {
-    title: "About",
+    title: "AboutWork",
     href: "#about"
   },
   {

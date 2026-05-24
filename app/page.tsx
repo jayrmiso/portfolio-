@@ -1,6 +1,8 @@
 import Hero from "@/components/Hero";
 import Navigation from "@/components/Navigation";
-import About from "@/components/About";
+import AboutWork from "@/components/AboutWork";
+import AboutMe from "@/components/AboutMe";
+import AboutSkills from "@/components/AboutSkills";
 
 export default function Home() {
   return (
@@ -14,7 +16,17 @@ export default function Home() {
         </section>
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-4 py-12 md:px-8">
-            <About />
+            <AboutWork />
+          </div>
+        </section>
+        <section className="border-b border-border">
+          <div className="mx-auto max-w-6xl px-4 py-12 md:px-8">
+            <AboutMe />
+          </div>
+        </section>
+        <section className="border-b border-border">
+          <div className="mx-auto max-w-6xl px-4 py-12 md:px-8">
+            <AboutSkills/>
           </div>
         </section>
       </main>

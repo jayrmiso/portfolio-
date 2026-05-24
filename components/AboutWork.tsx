@@ -1,6 +1,6 @@
 import CardImage, {CardImageProps} from "@/components/CardImage";
 
-export default function About() {
+export default function AboutWork() {
 
   const PERSONAL_WORKS: CardImageProps[] = [{
     src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
@@ -21,12 +21,12 @@ export default function About() {
 
   return (
     <div className={"space-y-6"}>
-      <div className={"grid grid-cols-2 gap-4"}>
-        <div className={"space-y-2"}>
+      <div className={"grid grid-cols-1 md:grid-cols-12 gap-4"}>
+        <div className={"space-y-2 md:col-span-5"}>
           <p className={"text-lg font-semibold uppercase text-muted-foreground"}>Selected Work</p>
           <h1 className={"text-5xl font-bold"}>Production work I have supported.</h1>
         </div>
-        <div className={"items-center justify-end mt-auto"}>
+        <div className={"items-center justify-end mt-auto md:col-span-7"}>
           <p className={"font-medium text-muted-foreground"}>
             Most of my work has been done as a subcontractor, taking on assigned tasks for live client and company projects.</p>
         </div>
