@@ -24,14 +24,14 @@ export default function AboutWork() {
       <div className={"grid grid-cols-1 md:grid-cols-12 gap-4"}>
         <div className={"space-y-2 md:col-span-5"}>
           <p className={"text-lg font-semibold uppercase text-muted-foreground"}>Selected Work</p>
-          <h1 className={"text-5xl font-bold"}>Production work I have supported.</h1>
+          <h1 className={"text-4xl font-bold md:text-5xl"}>Production work I have supported.</h1>
         </div>
         <div className={"items-center justify-end mt-auto md:col-span-7"}>
           <p className={"font-medium text-muted-foreground"}>
             Most of my work has been done as a subcontractor, taking on assigned tasks for live client and company projects.</p>
         </div>
       </div>
-      <div className={"grid grid-cols-3 gap-4 items-stretch"}>
+      <div className={"grid grid-cols-1 gap-4 items-stretch md:grid-cols-3"}>
         {
           PERSONAL_WORKS.map((work, index) => (
             <CardImage key={index} src={work.src} title={work.title} description={work.description} badges={work.badges} />

@@ -8,7 +8,7 @@ export default function AboutMe() {
           <p className="text-lg font-semibold uppercase text-muted-foreground">
             About Me
           </p>
-          <h1 className="text-5xl font-bold">
+          <h1 className="text-4xl font-bold md:text-5xl">
             Backend-leaning, practical, and production-minded.
           </h1>
         </div>
@@ -17,14 +17,14 @@ export default function AboutMe() {
         </div>
       </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
-        <Card className={"col-span-5 p-5"}>
+        <Card className={"p-5 md:col-span-5"}>
           <CardTitle className={"font-semibold"}>Short Bio</CardTitle>
           <CardDescription className={"font-semibold space-y-6"}>
             <p>I am a backend-focused web developer who has worked as a subcontractor on production web applications. I help maintain websites, manage CMS workflows, build and support backend APIs, and keep deployment pipelines moving.</p>
             <p>I can work with frontend tasks when needed, but my strongest area is backend and production support: APIs, Strapi, CI/CD, deployments, and site maintenance.</p>
           </CardDescription>
         </Card>
-        <Card className={"col-span-7"}>
+        <Card className={"md:col-span-7"}>
           <CardContent className="space-y-4">
             <div className="grid grid-cols-1 gap-4 border-b pb-4 md:grid-cols-12">
               <div className="md:col-span-4 font-semibold">01</div>

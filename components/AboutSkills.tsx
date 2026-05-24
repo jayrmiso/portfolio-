@@ -20,7 +20,7 @@ export default function AboutSkills () {
           <p className="text-lg font-semibold uppercase text-muted-foreground">
             Skills
           </p>
-          <h1 className="text-5xl font-bold">Tools and work I can handle.</h1>
+          <h1 className="text-4xl font-bold md:text-5xl">Tools and work I can handle.</h1>
         </div>
         <div className="items-center justify-end mt-auto md:col-span-7">
           <p className="font-medium text-muted-foreground">
@@ -29,7 +29,7 @@ export default function AboutSkills () {
         </div>
       </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
-        <Card className="col-span-5 p-5">
+        <Card className="p-5 md:col-span-5">
           <CardTitle>
             <span className="text-lg font-bold">Core capabilities</span>
           </CardTitle>
@@ -37,13 +37,13 @@ export default function AboutSkills () {
             <div className="grid grid-cols-2 gap-4">
               {
                 CORE_CAPABILITIES.map((cp, index) => (
-                  <Card key={index} className={"bg-gray-200 text-sm font-semibold justify-center px-5"}>{cp}</Card>
+                  <Card key={index} className={"justify-center bg-muted px-5 text-sm font-semibold"}>{cp}</Card>
                 ))
               }
             </div>
           </CardContent>
         </Card>
-        <Card className="col-span-7 p-5">
+        <Card className="p-5 md:col-span-7">
           <CardTitle>
             <span className="text-lg font-bold">How I can help</span>
           </CardTitle>

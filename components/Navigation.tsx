@@ -1,18 +1,13 @@
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Avatar, AvatarFallback} from "@/components/ui/avatar";
 import {NavigationMenus} from "@/components/NavigationMenu";
 
 export default function Navigation() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b-2 border-gray-200 bg-background">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-5 md:px-8">
         <div className="flex items-center gap-3">
           <Avatar>
-            <AvatarImage
-              src="https://github.com/shadcn.png"
-              alt="@shadcn"
-              className="grayscale"
-            />
-            <AvatarFallback>CN</AvatarFallback>
+            <AvatarFallback>AR</AvatarFallback>
           </Avatar>
           <span className="font-bold">Arjay</span>
         </div>
