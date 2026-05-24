@@ -132,15 +132,40 @@
 @layer utilities {
   .portfolio-grid-bg {
     background-image:
-      linear-gradient(var(--border) 1px, transparent 1px),
-      linear-gradient(90deg, var(--border) 1px, transparent 1px);
-    background-size: 56px 56px;
+      linear-gradient(color-mix(in oklch, var(--border) 28%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in oklch, var(--border) 28%, transparent) 1px, transparent 1px);
+    background-size: 72px 72px;
+    background-position: center top;
   }
 
   .portfolio-fine-grid-bg {
     background-image:
-      linear-gradient(var(--border) 1px, transparent 1px),
-      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      linear-gradient(color-mix(in oklch, var(--border) 55%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in oklch, var(--border) 55%, transparent) 1px, transparent 1px);
     background-size: 28px 28px;
+  }
+
+  .scroll-reveal {
+    animation: reveal-section 0.8s ease both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 28%;
+  }
+}
+
+@keyframes reveal-section {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    animation: none;
   }
 }

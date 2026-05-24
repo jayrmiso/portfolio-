@@ -33,11 +33,11 @@ const terminalLines: { prompt: string; value: string; muted?: boolean }[] = [
 
 export default function Hero() {
   return (
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:items-center">
-      <div className={"space-y-6 md:col-span-5"}>
+    <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center">
+      <div className={"space-y-6 lg:col-span-6 xl:col-span-5"}>
         <p className={"text-xs font-semibold uppercase tracking-widest text-muted-foreground"}>status: backend-focused web developer</p>
-        <h1 className={"max-w-2xl text-4xl font-extrabold tracking-tighter md:text-6xl"}>Reliable websites, CMS workflows, and backend systems.</h1>
-        <p className={"text-sm font-medium text-muted-foreground"}>I work on production websites and web applications,
+        <h1 className={"max-w-4xl text-4xl font-extrabold tracking-tighter md:text-6xl 2xl:text-7xl"}>Reliable websites, CMS workflows, and backend systems.</h1>
+        <p className={"max-w-3xl text-sm font-medium text-muted-foreground md:text-base"}>I work on production websites and web applications,
           focusing on backend APIs, Strapi CMS, CI/CD, deployments, and practical website maintenance.</p>
         <div className={"flex flex-col gap-3 sm:flex-row sm:items-center"}>
           <Button asChild size={"lg"}
@@ -82,8 +82,8 @@ export default function Hero() {
           </Card>
         </div>
       </div>
-      <div className={"md:col-span-7"}>
-        <Card size={"default"} className={"mx-auto w-full max-w-xl"}>
+      <div className={"lg:col-span-6 xl:col-span-7"}>
+        <Card size={"default"} className={"ml-auto w-full max-w-3xl"}>
           <CardHeader className="grid-cols-[1fr_auto] items-center border-b border-border">
             <div className="flex gap-1.5">
               <span className="size-2.5 rounded-full bg-foreground/30" />
@@ -102,7 +102,7 @@ export default function Hero() {
                   {line.value}
                 </span>
               </div>
-            ))}w
+            ))}
             <div className={"flex flex-wrap items-center gap-2 pt-4"}>
               <Badge variant="outline" className={"rounded-full px-3 py-2 font-semibold"}>Backend</Badge>
               <Badge variant="outline" className={"rounded-full px-3 py-2 font-semibold"}>Strapi</Badge>

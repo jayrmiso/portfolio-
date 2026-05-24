@@ -4,7 +4,7 @@ import {NavigationMenus} from "@/components/NavigationMenu";
 export default function Navigation() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-5 md:px-8">
+      <div className="mx-auto flex w-full max-w-[1680px] items-center justify-between px-6 py-5 sm:px-8 md:px-12 2xl:px-16">
         <div className="flex items-center gap-3">
           <Avatar>
             <AvatarFallback>AR</AvatarFallback>
