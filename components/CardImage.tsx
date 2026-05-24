@@ -8,31 +8,40 @@ export interface CardImageProps {
   description: string
   badges: string[]
   imageAlt?: string
+  status?: string
+  meta?: string[]
 }
 
-export default function CardImage({ src, title, description, badges = ["Badge A", "Badge B", "Badge C"], imageAlt }: CardImageProps) {
+export default function CardImage({ title, description, badges = ["Badge A", "Badge B", "Badge C"], status = "production", meta = [] }: CardImageProps) {
   return (
-    <Card className="border-b border-border h-full">
-      <img
-        src={src || "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"}
-        alt={imageAlt || `${title} project preview`}
-        className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
-      />
+    <Card className="h-full border-b border-border">
+      <div className="portfolio-fine-grid-bg flex min-h-40 flex-col justify-end gap-3 border-b border-border bg-muted p-4">
+        <Badge variant="outline" className="w-fit rounded-full bg-background px-3 py-2 font-semibold">
+          {status}
+        </Badge>
+        <div className={"flex flex-wrap items-center gap-2"}>
+          {
+            badges.map((badge, index) => (
+              <Badge key={index} variant="outline" className={"rounded-full bg-background px-3 py-2 font-semibold"}>
+                {badge}
+              </Badge>
+            ))
+          }
+        </div>
+      </div>
       <CardHeader>
         <CardTitle>
           <span>{title || 'Placeholder'}</span>
         </CardTitle>
         <CardDescription className={"space-y-6"}>
           <p className={"whitespace-normal hyphens-auto"}>{description || 'Lorem ipsum'}</p>
-          <div className={"flex flex-wrap items-center gap-3"}>
-            {
-              badges.map((badge, index) => (
-                <Badge key={index} className={"rounded-full px-4 py-4 font-semibold transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:shadow-lg"}>
-                  {badge}
-                </Badge>
-              ))
-            }
-          </div>
+          {meta.length > 0 && (
+            <div className="grid gap-2 border-t border-border pt-4 text-xs font-semibold text-muted-foreground">
+              {meta.map((item) => (
+                <span key={item}>{item}</span>
+              ))}
+            </div>
+          )}
         </CardDescription>
       </CardHeader>
     </Card>

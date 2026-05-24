@@ -1,65 +1,56 @@
 import {Card, CardContent, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
 
 export default function AboutSkills () {
-  const CORE_CAPABILITIES = ["Backend APIs", "Strapi CMS", "CI/CD", "Deployments", "Website Maintenance", "Frontend Support"]
-  const HOW_I_CAN_HELP: { bold: string, text: string }[] = [{
-    bold: "CMS",
-    text: "Managing content structures, admin workflows, and Strapi-related updates."
+  const STACK_GROUPS: { title: string, text: string, badge: string }[] = [{
+    title: "CMS",
+    text: "Strapi, content models, admin workflows, and content updates.",
+    badge: "structured content"
   }, {
-    bold: "Backend",
-    text: "Supporting API routes, integrations, bug fixes, and data flow."
+    title: "Backend",
+    text: "API routes, integrations, data flow, and production fixes.",
+    badge: "server logic"
   }, {
-    bold: "Production",
-    text: "Helping with deployments, CI/CD, website updates, and maintenance tasks."
+    title: "Delivery",
+    text: "CI/CD, deployments, build checks, and release support.",
+    badge: "ship safely"
+  }, {
+    title: "Frontend Support",
+    text: "Next.js, responsive UI, shadcn components, and practical polish.",
+    badge: "clean UI"
   }]
 
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
         <div className="space-y-2 md:col-span-5">
-          <p className="text-lg font-semibold uppercase text-muted-foreground">
-            Skills
+          <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            ~/stack
           </p>
-          <h1 className="text-4xl font-bold md:text-5xl">Tools and work I can handle.</h1>
+          <h1 className="text-4xl font-extrabold tracking-tighter md:text-5xl">Group skills by usefulness.</h1>
         </div>
         <div className="items-center justify-end mt-auto md:col-span-7">
           <p className="font-medium text-muted-foreground">
-            A focused skill set for backend-leaning web development, CMS workflows, and live website support.
+            This reads better than a generic logo wall. Each block tells the visitor what kind of problem you can help with.
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
-        <Card className="p-5 md:col-span-5">
-          <CardTitle>
-            <span className="text-lg font-bold">Core capabilities</span>
-          </CardTitle>
-          <CardContent className="space-y-6 p-0">
-            <div className="grid grid-cols-2 gap-4">
-              {
-                CORE_CAPABILITIES.map((cp, index) => (
-                  <Card key={index} className={"justify-center bg-muted px-5 text-sm font-semibold"}>{cp}</Card>
-                ))
-              }
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {STACK_GROUPS.map((item) => (
+          <Card key={item.title} className="min-h-44 justify-between p-5">
+            <div className="space-y-3">
+              <CardTitle>
+                <span className="text-lg font-bold">{item.title}</span>
+              </CardTitle>
+              <CardContent className="p-0">
+                <p className="text-sm font-medium text-muted-foreground">{item.text}</p>
+              </CardContent>
             </div>
-          </CardContent>
-        </Card>
-        <Card className="p-5 md:col-span-7">
-          <CardTitle>
-            <span className="text-lg font-bold">How I can help</span>
-          </CardTitle>
-          <CardContent className="space-y-6 p-0">
-            <div className="space-y-4">
-              {
-                HOW_I_CAN_HELP.map((help, index) => (
-                  <div key={index}>
-                    <span className={"text-sm font-semibold"}>{help.bold}: </span>
-                    <span>{help.text}</span>
-                  </div>
-                ))
-              }
-            </div>
-          </CardContent>
-        </Card>
+            <Badge variant="outline" className="w-fit rounded-full px-3 py-2 font-semibold">
+              {item.badge}
+            </Badge>
+          </Card>
+        ))}
       </div>
     </div>
   )

@@ -20,14 +20,14 @@ const footerLinks: { label: string; href: string }[] = [
 export default function Footer() {
   return (
     <footer className="space-y-8">
-      <div className="grid grid-cols-1 gap-6 rounded-xl border border-border bg-card p-6 md:grid-cols-12 md:p-8">
+      <div className="grid grid-cols-1 gap-6 rounded-xl border border-border bg-primary p-6 text-primary-foreground md:grid-cols-12 md:p-8">
         <div className="space-y-4 md:col-span-8">
-          <Badge className="rounded-full px-4 py-2">Available for practical web work</Badge>
+          <Badge variant="secondary" className="rounded-full px-4 py-2">Available for practical web work</Badge>
           <div className="space-y-3">
             <h2 className="max-w-3xl text-3xl font-bold md:text-5xl">
               Need help with backend, CMS, or production website support?
             </h2>
-            <p className="max-w-2xl text-sm font-medium text-muted-foreground md:text-base">
+            <p className="max-w-2xl text-sm font-medium text-primary-foreground/70 md:text-base">
               I am open to backend tasks, Strapi/CMS support, API work, deployments,
               CI/CD fixes, and website maintenance.
             </p>
@@ -35,10 +35,10 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col justify-end gap-3 md:col-span-4 md:items-end">
-          <Button asChild size="lg" className="rounded-full font-semibold">
+          <Button asChild size="lg" variant="secondary" className="rounded-full font-semibold">
             <Link href="mailto:you@example.com">Email me</Link>
           </Button>
-          <p className="text-xs font-medium text-muted-foreground">
+          <p className="text-xs font-medium text-primary-foreground/70">
             Replace this email with your real contact address.
           </p>
         </div>

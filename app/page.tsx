@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-      <main className="min-h-screen bg-background font-mono antialiased">
+      <main className="portfolio-grid-bg min-h-screen bg-background font-mono antialiased">
         <Navigation/>
         <section id="top" className="scroll-mt-24 border-b border-border">
           <div className="mx-auto max-w-6xl px-4 py-14 md:px-8 md:py-20">

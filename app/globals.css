@@ -128,3 +128,19 @@
     @apply font-sans;
   }
 }
+
+@layer utilities {
+  .portfolio-grid-bg {
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .portfolio-fine-grid-bg {
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}

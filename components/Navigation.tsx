@@ -9,9 +9,9 @@ export default function Navigation() {
           <Avatar>
             <AvatarFallback>AR</AvatarFallback>
           </Avatar>
-          <span className="font-bold">Arjay</span>
+          <span className="font-bold max-[420px]:hidden">Arjay</span>
         </div>
-        <nav className="flex gap-6">
+        <nav className="flex max-w-[68vw] gap-6 overflow-x-auto md:max-w-none">
           <NavigationMenus/>
         </nav>
       </div>
