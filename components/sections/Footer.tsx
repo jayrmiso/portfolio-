@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col justify-end gap-3 md:col-span-4 md:items-end">
-          <Button asChild size="lg" variant="secondary" className="rounded-full font-semibold">
+          <Button asChild size="lg" variant="secondary" className="rounded-full font-semibold transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_16px_36px_rgba(0,0,0,0.16)]">
             <Link href="mailto:you@example.com">Email me</Link>
           </Button>
           <p className="text-xs font-medium text-primary-foreground/70">

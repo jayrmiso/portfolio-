@@ -4,8 +4,9 @@ import type { WorkItem } from "@/lib/portfolio-content";
 
 export default function WorkCard({ title, description, badges, status, meta }: WorkItem) {
   return (
-    <Card className="h-full border-b border-border">
-      <div className="portfolio-fine-grid-bg flex min-h-40 flex-col justify-end gap-3 border-b border-border bg-muted p-4">
+    <div className="group/card h-full transform-gpu transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_30px_80px_-24px_rgba(0,0,0,0.28)]">
+      <Card className="h-full border-border/70 group-hover/card:border-foreground/20">
+        <div className="portfolio-fine-grid-bg flex min-h-40 flex-col justify-end gap-3 border-b border-border bg-muted p-4 transition-colors duration-300 group-hover/card:bg-muted/70">
         <Badge variant="outline" className="w-fit rounded-full bg-background px-3 py-2 font-semibold">
           {status}
         </Badge>
@@ -34,6 +35,7 @@ export default function WorkCard({ title, description, badges, status, meta }: W
           )}
         </CardDescription>
       </CardHeader>
-    </Card>
+      </Card>
+    </div>
   )
 }
