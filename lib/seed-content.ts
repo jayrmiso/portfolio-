@@ -13,30 +13,30 @@ export const fallbackWorkItems: PortfolioWorkItem[] = [
   {
     title: "Storia.ph Wedding Platform",
     description:
-      "Supported a live wedding-related web app through website management, backend tasks, CMS updates, and production maintenance.",
-    badges: ["CMS", "Backend", "Maintenance"],
+      "Worked across frontend and backend to ship wedding website features, including AI image generation flows and onboarding moodboards.",
+    badges: ["Next.js", "Node.js", "AI Features"],
     status: "public",
-    meta: ["role: subcontractor web developer", "focus: reliability and support"],
+    meta: ["role: full-stack support", "focus: feature delivery + maintenance"],
     imageUrl: "/images/work/storia-ph.png",
     imageAlt: "Dashboard view representing wedding platform operations and CMS workflow.",
   },
   {
-    title: "Confidential AI Platform",
+    title: "Confidential Client Platform",
     description:
-      "Contributed to backend and platform work for a private AI product under subcontractor terms. Details kept confidential.",
-    badges: ["APIs", "CI/CD", "Private"],
-    status: "confidential",
-    meta: ["role: backend/platform support", "focus: private production work"],
+      "Delivered outsourced feature work for a confidential platform, including backend API updates, AI-related implementation tasks, and production fixes under NDA-style constraints.",
+    badges: ["APIs", "AI Implementation", "Confidential"],
+    status: "private",
+    meta: ["role: outsourced web developer", "focus: stable releases"],
     imageUrl: "/images/work/confidential-ai.png",
     imageAlt: "Abstract secure AI platform operations panel with deployment telemetry.",
   },
   {
-    title: "Contractor Web Tasks",
+    title: "AI Delivery and CI/CD Support",
     description:
-      "Handled assigned production tasks as a subcontractor, including Strapi management, API work, deployments, and site fixes.",
-    badges: ["Strapi", "Deploy", "Fixes"],
-    status: "ongoing pattern",
-    meta: ["role: task owner", "focus: practical delivery"],
+      "Reduced manual deployment work by setting up CI/CD with GitHub Actions and supporting releases across AWS Elastic Beanstalk, Vercel, and Heroku.",
+    badges: ["GitHub Actions", "CI/CD", "AWS Deployments"],
+    status: "production support",
+    meta: ["role: delivery owner", "focus: fewer manual steps"],
     imageUrl: "/images/work/contractor-tasks.png",
     imageAlt: "Task board showing maintenance tickets, deployment checks, and API updates.",
   },
@@ -45,21 +45,21 @@ export const fallbackWorkItems: PortfolioWorkItem[] = [
 export const fallbackProcessSteps: PortfolioProcessStep[] = [
   {
     number: "01",
-    title: "Inspect",
+    title: "Scope",
     description:
-      "Understand the code, CMS, deployment flow, and task requirements before changing things.",
+      "Clarify the requirement, constraints, and whether a standard implementation or an AI-assisted feature is the right fit.",
   },
   {
     number: "02",
-    title: "Implement",
+    title: "Build",
     description:
-      "Make scoped backend, CMS, or website updates without unnecessary rewrites.",
+      "Ship scoped frontend/backend changes, API updates, and AI-enabled flows when needed without overengineering.",
   },
   {
     number: "03",
     title: "Verify",
     description:
-      "Check build, lint, deployments, and production behavior before calling the task done.",
+      "Validate behavior through checks, deployments, and production testing, including result quality for AI-driven features.",
   },
 ];
 
@@ -70,14 +70,19 @@ export const fallbackStackGroups: PortfolioStackGroup[] = [
     badge: "structured content",
   },
   {
-    title: "Backend",
-    text: "API routes, integrations, data flow, and production fixes.",
-    badge: "server logic",
+    title: "Backend and APIs",
+    text: "Node.js and TypeScript API work, integrations, data flow, and production fixes.",
+    badge: "server-side delivery",
   },
   {
-    title: "Delivery",
-    text: "CI/CD, deployments, build checks, and release support.",
-    badge: "ship safely",
+    title: "AI Engineering Focus",
+    text: "AI feature integration for web apps, including image-generation workflows and practical implementation support.",
+    badge: "ai-enabled apps",
+  },
+  {
+    title: "Delivery and Ops",
+    text: "CI/CD, deployments, build checks, and release support across multiple environments.",
+    badge: "ship reliably",
   },
   {
     title: "Frontend Support",
@@ -87,18 +92,18 @@ export const fallbackStackGroups: PortfolioStackGroup[] = [
 ];
 
 export const fallbackHeroContent: HeroContent = {
-  statusLine: "status: backend-focused web developer",
-  headline: "Reliable websites, CMS workflows, and backend systems.",
+  statusLine: "status: full-stack developer (backend-leaning) with AI product experience",
+  headline: "I build reliable web products, including AI-powered features when they add value.",
   description:
-    "I work on production websites and web applications, focusing on backend APIs, Strapi CMS, CI/CD, deployments, and practical website maintenance.",
+    "I have delivered production web work across frontend, backend APIs, CMS workflows, CI/CD, and maintenance since 2021. I also build AI-powered product features as part of practical client delivery.",
   primaryCtaLabel: "View Work",
   primaryCtaHref: "#work",
-  secondaryCtaLabel: "Contact",
+  secondaryCtaLabel: "Contact Me",
   secondaryCtaHref: "#contact",
   metrics: [
-    { value: "6+", label: "Production projects" },
-    { value: "3", label: "Core strengths" },
-    { value: "24h", label: "Response goal" },
+    { value: "2021-2026", label: "Delivery experience" },
+    { value: "AI + Backend", label: "Current focus" },
+    { value: "On-demand", label: "Production support" },
   ],
   terminalTitle: "production-check.sh",
   terminalLines: [
@@ -115,10 +120,10 @@ export const fallbackHeroContent: HeroContent = {
 };
 
 export const fallbackAboutProfileContent: AboutProfileContent = {
-  cardTitle: "Short positioning",
+  cardTitle: "How I Work",
   paragraph:
-    "I am a backend-focused web developer who has worked as a subcontractor on production web applications. I help maintain websites, manage CMS workflows, build and support backend APIs, and keep deployment pipelines moving.",
-  tags: ["calm", "practical", "production-minded"],
+    "I work as a backend-leaning full-stack developer across both standard web product work and AI-enabled features. My day-to-day includes building features, updating APIs, fixing production issues, and shipping changes safely.",
+  tags: ["full-stack", "backend-leaning", "reliable"],
   avatarImageUrl: "/images/site/about-workspace.png",
   avatarImageAlt: "Abstract technical workspace with backend dashboards and engineering notes.",
 };
@@ -140,10 +145,10 @@ export const fallbackNavigationContent: NavigationContent = {
 };
 
 export const fallbackFooterContent: FooterContent = {
-  badge: "Available for practical web work",
-  headline: "Need help with backend, CMS, or production website support?",
+  badge: "Open to backend-leaning full-stack and AI product roles",
+  headline: "Hiring for full-stack delivery with backend ownership and AI feature support?",
   description:
-    "I am open to backend tasks, Strapi/CMS support, API work, deployments, CI/CD fixes, and website maintenance.",
+    "I am looking for roles where I can deliver production web features end-to-end, including backend APIs, CMS workflows, CI/CD, and AI-powered product capabilities.",
   emailLabel: "Email me",
   emailHref: "mailto:you@example.com",
   emailHint: "Replace this email with your real contact address.",
@@ -156,20 +161,20 @@ export const fallbackSectionIntros: Record<
 > = {
   work: {
     eyebrow: "~/selected-work",
-    title: "Production work and support experience.",
+    title: "Recent work I can share.",
     description:
-      "A snapshot of the backend, CMS, deployment, and maintenance work I have supported across live projects.",
+      "Public and confidentiality-safe examples across AI features, backend APIs, and production support.",
   },
   process: {
     eyebrow: "~/process",
-    title: "Practical, careful, production-minded.",
+    title: "Simple process, reliable output.",
     description:
-      "I approach backend and website support work with a simple flow: understand the system, make scoped changes, and verify the result.",
+      "My workflow stays practical: scope clearly, build the right solution, verify in deployment, and support follow-up fixes when needed.",
   },
   stack: {
     eyebrow: "~/stack",
-    title: "Tools grouped by practical use.",
+    title: "Tools I use for production web and AI feature delivery.",
     description:
-      "Each area reflects the kind of production website, backend, CMS, and deployment work I can support.",
+      "This stack reflects real client work across web platforms, backend services, and AI-enabled features.",
   },
 };
