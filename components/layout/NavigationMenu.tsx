@@ -3,6 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 
+import type { NavLink } from "@/lib/portfolio-types";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -11,34 +12,19 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
-const menus: { title: string; href: string }[] = [
-  {
-    title: "Work",
-    href: "#work"
-  },
-  {
-    title: "About",
-    href: "#about"
-  },
-  {
-    title: "Skills",
-    href: "#skills"
-  },
-  {
-    title: "Contact",
-    href: "#contact",
-  }
-]
+type NavigationMenusProps = {
+  items: NavLink[];
+};
 
-export function NavigationMenus() {
+export function NavigationMenus({ items }: NavigationMenusProps) {
   return (
     <NavigationMenu>
       <NavigationMenuList>
         {
-          menus.map(({ title, href }) => (
-            <NavigationMenuItem key={title}>
+          items.map(({ label, href }) => (
+            <NavigationMenuItem key={`${label}-${href}`}>
               <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                <Link href={href} className={"text-xs font-semibold text-muted-foreground md:text-sm"}>{title}</Link>
+                <Link href={href} className={"text-xs font-semibold text-muted-foreground md:text-sm"}>{label}</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           ))

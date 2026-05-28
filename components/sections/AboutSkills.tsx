@@ -1,19 +1,25 @@
 import {Card, CardContent, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
-import { stackGroups } from "@/lib/portfolio-content";
 import SectionIntro from "@/components/sections/SectionIntro";
+import type { PortfolioStackGroup, SectionIntroContent } from "@/lib/portfolio-types";
 
-export default function AboutSkills () {
+type AboutSkillsProps = {
+  groups: PortfolioStackGroup[];
+  intro: SectionIntroContent;
+};
+
+export default function AboutSkills({ groups, intro }: AboutSkillsProps) {
+
   return (
     <div className="space-y-6">
       <SectionIntro
-        eyebrow="~/stack"
-        title="Tools grouped by practical use."
-        description="Each area reflects the kind of production website, backend, CMS, and deployment work I can support."
+        eyebrow={intro.eyebrow}
+        title={intro.title}
+        description={intro.description}
       />
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {stackGroups.map((item) => (
-          <div key={item.title} className="group/card h-full transform-gpu transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.22)]">
+        {groups.map((item, index) => (
+          <div key={item.id ?? `${item.title}-${index}`} className="group/card h-full transform-gpu transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.22)]">
             <Card className="min-h-44 justify-between border-border/70 p-5 group-hover/card:border-foreground/20">
               <div className="space-y-3">
                 <CardTitle>
